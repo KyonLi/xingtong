@@ -31,7 +31,6 @@ const app = new Vue({
   destroyed() { },
   methods: {
     setAvatar(file) {
-      console.log('11111111')
       this.avatarURL = URL.createObjectURL(file.raw);
     },
     numberChange(value) {
