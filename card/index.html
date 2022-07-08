@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>星瞳工牌</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.7/theme-chalk/index.min.css">
+  <script src="https://cdn.staticfile.org/vue/2.6.9/vue.min.js"></script>
+  <script src="https://cdn.staticfile.org/element-ui/2.15.7/index.min.js"></script>
+  <script src="https://cdn.staticfile.org/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script src="https://cdn.staticfile.org/jsbarcode/3.11.5/barcodes/JsBarcode.code128.min.js"></script>
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <div id="preview" class="main" :style="{zoom}">
+      <img v-show="avatarURL" class="avatar" :src="avatarURL" alt="" />
+      <img v-show="number" id="barcode" alt="" />
+      <div class="text-area">
+        <p class="number"><span>水军编号：</span><span>{{number}}</span></p>
+        <p class="nickname"><span>小星星昵称：</span><span>{{nickname}}</span></p>
+      </div>
+    </div>
+    <el-form class="form" label-width="auto">
+      <el-form-item label="编号">
+        <el-input v-model="number" type="number" @input="numberChange"></el-input>
+      </el-form-item>
+      <el-form-item label="昵称">
+        <el-input v-model="nickname" type="text"></el-input>
+      </el-form-item>
+      <el-form-item label="头像">
+        <el-upload drag action="" limit="1" :auto-upload="false" :show-file-list="false"
+          accept="image/jpeg,image/png" :on-change="setAvatar">
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+          <div class="el-upload__tip" slot="tip">只支持jpg/png格式图片</div>
+        </el-upload>
+      </el-form-item>
+    </el-form>
+    <el-button class="btn-gen" type="primary" @click="gen">生成</el-button>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
