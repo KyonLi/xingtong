@@ -17,7 +17,6 @@ const app = new Vue({
   },
   mounted() {
     window.onresize = () => {
-      console.log(document.body.clientWidth);
       this.screenWidth = document.body.clientWidth;
     };
     let loadingInstance = ELEMENT.Loading.service({
@@ -32,6 +31,7 @@ const app = new Vue({
   destroyed() { },
   methods: {
     setAvatar(file) {
+      console.log('11111111')
       this.avatarURL = URL.createObjectURL(file.raw);
     },
     numberChange(value) {
