@@ -102,3 +102,32 @@ body {
 .btn-gen {
     margin: 0 30px;
 }
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.wrap > .content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: white;
+    padding: 40px 10px;
+    box-sizing: border-box;
+    border-radius: 18px;
+}
+
+.wrap > .content > img {
+    display: block;
+    width: 100%;
+}

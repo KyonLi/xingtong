@@ -41,6 +41,18 @@
       </el-form-item>
     </el-form>
     <el-button class="btn-gen" type="primary" @click="gen">生成</el-button>
+
+    <transition name="el-fade-in-linear">
+      <div v-show="showViewer" class="wrap">
+        <transition name="el-zoom-in-top">
+          <div v-show="showViewer" class="content">
+            <img :src="artifactURL" />
+            <p style="color:#333;">长按保存图片</p>
+            <el-link type="info" @click="showViewer=false">关闭</el-link>
+          </div>
+        </transition>
+      </div>
+    </transition>
   </div>
   <script src="./js/app.js"></script>
 </body>

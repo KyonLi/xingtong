@@ -1,10 +1,13 @@
+const isIOS = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1) || (navigator.userAgent.toLowerCase().indexOf('ipad') != -1);
 const app = new Vue({
   el: '#app',
   data: {
     screenWidth: document.body.clientWidth,
     number: '',
     nickname: '',
-    avatarURL: ''
+    avatarURL: '',
+    showViewer: false,
+    artifactURL: ''
   },
   computed: {
     zoom() {
@@ -43,12 +46,18 @@ const app = new Vue({
       });
     },
     gen() {
+      this.artifactURL = '';
       domtoimage.toJpeg(document.getElementById('preview'), { quality: 1.0, style: { zoom: 'unset' } })
         .then(dataUrl => {
-          var link = document.createElement('a');
-          link.download = 'xt-card.jpg';
-          link.href = dataUrl;
-          link.click();
+          if (isIOS) {
+            this.artifactURL = dataUrl;
+            this.showViewer = true;
+          } else {
+            var link = document.createElement('a');
+            link.download = 'xt-card.jpg';
+            link.href = dataUrl;
+            link.click();
+          }
         });
     }
   }
