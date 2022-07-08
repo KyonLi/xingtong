@@ -20,6 +20,14 @@ const app = new Vue({
       console.log(document.body.clientWidth);
       this.screenWidth = document.body.clientWidth;
     };
+    let loadingInstance = ELEMENT.Loading.service({
+      target: '#app',
+      lock: true,
+      text: '字体加载中...'
+    });
+    document.fonts.ready.then(_ => {
+      loadingInstance.close();
+    });
   },
   destroyed() { },
   methods: {
