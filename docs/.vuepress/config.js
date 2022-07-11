@@ -11,7 +11,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '帮助我们改善此页面！',
-    lastUpdated: '上次更新: ',
+    lastUpdated: '上次更新',
     nextLinks: false,
     prevLinks: false,
     sidebarDepth: 0,
