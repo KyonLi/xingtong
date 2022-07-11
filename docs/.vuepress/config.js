@@ -8,6 +8,7 @@ module.exports = {
   themeConfig: {
     repo: 'KyonLi/xingtong',
     repoLabel: '查看源码',
+    docsDir: 'docs',
     editLinks: true,
     editLinkText: '帮助我们改善此页面！',
     lastUpdated: '上次更新: ',
