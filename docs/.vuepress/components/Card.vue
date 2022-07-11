@@ -205,6 +205,7 @@ export default {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, .6);
+  z-index: 20;
 }
 
 .wrap>.content {
@@ -213,6 +214,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 90%;
+  max-width: 600px;
   background-color: white;
   padding: 40px 10px;
   box-sizing: border-box;
