@@ -1,0 +1,20 @@
+{
+  "name": "xingtong",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "https://github.com/KyonLi/xingtong",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "Kyon",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "element-ui": "^2.15.9",
+    "vue-resize-directive": "^1.2.0"
+  }
+}
