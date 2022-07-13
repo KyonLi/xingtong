@@ -63,7 +63,7 @@ export default {
       avatarURL: '',
       avatarMode: 'contain',
       avatarBgColor: '',
-      onePixelPNG: 'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
+      onePixelPNG: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
       showViewer: false,
       artifactURL: '',
       generating: false
