@@ -2,7 +2,7 @@
   <div id="app-container" class="app-container" v-loading="fontLoading" element-loading-text="字体加载中..."
     v-resize.initial="onResize">
     <div id="preview" class="main" :style="{ zoom: containerWidth / 1200 }">
-      <img v-show="avatarURL" class="avatar" :src="avatarURL" alt="" />
+      <img class="avatar" :style="{ backgroundColor: avatarBgColor, objectFit: avatarMode }" :src="avatarURL ? avatarURL : onePixelPNG" alt="" />
       <img v-show="number" id="barcode" alt="" />
       <div class="text-area">
         <p class="number"><span>水军编号：</span><span>{{ number }}</span></p>
@@ -21,7 +21,12 @@
           :on-change="setAvatar">
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-          <div class="el-upload__tip" slot="tip">只支持jpg/png格式图片</div>
+          <div class="el-upload__tip" slot="tip">
+            <el-radio v-model="avatarMode" label="contain">适应</el-radio>
+            <el-radio v-model="avatarMode" label="cover">填充</el-radio>
+            <el-radio v-model="avatarMode" label="fill">拉伸</el-radio>
+            <el-color-picker v-model="avatarBgColor"></el-color-picker>
+          </div>
         </el-upload>
       </el-form-item>
     </el-form>
@@ -56,6 +61,9 @@ export default {
       number: '',
       nickname: '',
       avatarURL: '',
+      avatarMode: 'contain',
+      avatarBgColor: '',
+      onePixelPNG: 'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
       showViewer: false,
       artifactURL: '',
       generating: false
@@ -71,7 +79,11 @@ export default {
   destroyed() { },
   methods: {
     setAvatar(file) {
-      this.avatarURL = URL.createObjectURL(file.raw);
+      if (file.raw.type === 'image/jpeg' || file.raw.type === 'image/png') {
+        this.avatarURL = URL.createObjectURL(file.raw);
+      } else {
+        this.$message.error('头像只支持jpg/png格式');
+      }
     },
     numberChange(value) {
       JsBarcode("#barcode", `XT Fans No. ${value}`, {
@@ -143,14 +155,18 @@ export default {
   width: unset;
 }
 
+>>> .el-upload__tip {
+  display: flex;
+  align-items: center;
+}
+
 .avatar {
   display: block;
   position: absolute;
   border-radius: 999999px;
-  width: 269px;
-  height: 269px;
-  object-fit: contain;
-  top: 31px;
+  width: 267px;
+  height: 267px;
+  top: 33px;
   left: 874px;
 }
 
