@@ -158,6 +158,12 @@ export default {
 >>> .el-upload__tip {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+>>> .el-upload__tip > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .avatar {
