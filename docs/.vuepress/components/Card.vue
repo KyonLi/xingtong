@@ -1,12 +1,15 @@
 <template>
   <div id="app-container" class="app-container" v-loading="fontLoading" element-loading-text="字体加载中..."
     v-resize.initial="onResize">
-    <div id="preview" class="main" :style="{ zoom: containerWidth / 1200 }">
-      <img class="avatar" :style="{ backgroundColor: avatarBgColor, objectFit: avatarMode }" :src="avatarURL ? avatarURL : onePixelPNG" alt="" />
-      <img v-show="number" id="barcode" alt="" />
-      <div class="text-area">
-        <p class="number"><span>水军编号：</span><span>{{ number }}</span></p>
-        <p class="nickname"><span>小星星昵称：</span><span>{{ nickname }}</span></p>
+    <div class="preview-wrapper" :style="{ height: previewWrapperHeight }">
+      <div id="preview" class="main" :style="{ transform: zoom }">
+        <img class="avatar" :style="{ backgroundColor: avatarBgColor, objectFit: avatarMode }"
+          :src="avatarURL ? avatarURL : onePixelPNG" alt="" />
+        <img v-show="number" id="barcode" alt="" />
+        <div class="text-area">
+          <p class="number"><span>水军编号：</span><span>{{ number }}</span></p>
+          <p class="nickname"><span>小星星昵称：</span><span>{{ nickname }}</span></p>
+        </div>
       </div>
     </div>
     <el-form class="form" label-width="auto">
@@ -70,6 +73,12 @@ export default {
     }
   },
   computed: {
+    zoom() {
+      return `scale(${this.containerWidth / 1200})`;
+    },
+    previewWrapperHeight() {
+      return `${this.containerWidth / 1200 * 800}px`;
+    }
   },
   mounted() {
     document.fonts.ready.then(_ => {
@@ -97,7 +106,7 @@ export default {
     gen() {
       this.generating = true;
       this.artifactURL = '';
-      domtoimage.toJpeg(document.getElementById('preview'), { quality: 1.0, style: { zoom: 'unset' } }).then(dataUrl => {
+      domtoimage.toJpeg(document.getElementById('preview'), { quality: 1.0, style: { MozTransform: 'none', webkitTransform: 'none', transform: 'none' } }).then(dataUrl => {
         if (isIOS) {
           this.artifactURL = dataUrl;
           this.showViewer = true;
@@ -123,7 +132,7 @@ export default {
 <style scoped>
 @font-face {
   font-family: 'VonwaonBitmap';
-  src: url('../../assets/card/VonwaonBitmap-12pxLite.ttf')format('truetype');
+  src: url('../../assets/card/VonwaonBitmap-12px.ttf')format('truetype');
 }
 
 .app-container {
@@ -132,12 +141,18 @@ export default {
   flex-direction: column;
 }
 
+.preview-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .main {
   position: relative;
   width: 1200px;
   height: 800px;
   background: url("../../assets/card/bg.jpg") no-repeat top left / 100% 100%;
-  zoom: 0.5;
+  transform-origin: left top;
 }
 
 .el-form {
