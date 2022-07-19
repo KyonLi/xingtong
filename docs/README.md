@@ -27,7 +27,7 @@ title: 导航
 ## 资讯
 - [瞳百科](https://space.bilibili.com/1952903764/video)
 - [星瞳周报](https://space.bilibili.com/1413441/video)
-- [~~瞳~~v快报](https://space.bilibili.com/67080623/video)
+- [v快报](https://space.bilibili.com/67080623/video)
 
 ## 画作
 - [pixiv](https://www.pixiv.net/tags/%E6%98%9F%E7%9E%B3)
@@ -40,6 +40,9 @@ title: 导航
 
 ## 数据
 - [星瞳@VTBs](https://vtbs.moe/detail/401315430)
+- [VupLiveChatRecorder](https://vup.darkflame.ga/online)
+- [历史弹幕](https://matsuri.icu/channel/401315430)
+- [DD记录](https://ddstats.ericlamm.xyz/user/401315430)
 
 ## 其他
 - [星瞳字幕站](https://xn--kiv440b.top/)
