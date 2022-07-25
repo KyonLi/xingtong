@@ -49,3 +49,4 @@ title: 导航
 - [录播站](https://rec.ddindexs.com/%E6%98%9F%E7%9E%B3_Official?hash=dmrLmXvB)
 - [星瞳@Youtube](https://www.youtube.com/channel/UCpCbARDlAlD5igFgFPp9ToA)
 - [Telegram贴纸](https://t.me/addstickers/xingtong)
+- [粉丝勋章库](https://bili.jjnnnh.website/medal/)
