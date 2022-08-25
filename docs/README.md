@@ -12,6 +12,7 @@ title: 导航
 - [星瞳@bilibili直播间](https://live.bilibili.com/22886883)
 - [星瞳@抖音](https://www.douyin.com/user/MS4wLjABAAAAO_DN5Y6m73tFp_miILgfl-g1Fq2m0AWpYfsiuZ1lH5ZRSI_hhgFC3Ote647wWn-7)
 - [星瞳@微博](https://weibo.com/u/7318115383)
+- [星瞳@小红书](https://www.xiaohongshu.com/user/profile/5daf2b520000000001005b21)
 - [星瞳IP站](https://x5.qq.com/act/5732/a20210513xtip/index.html)
 
 ## 直播录像
@@ -40,7 +41,8 @@ title: 导航
 
 ## 数据
 - [星瞳@VTBs](https://vtbs.moe/detail/401315430)
-- [VupLiveChatRecorder](https://vup.darkflame.ga/online)
+- [~~VupLiveChatRecorder~~](https://vup.darkflame.ga/online)
+- [同接营收](http://www.vtbs.fun/liveRecord)
 - [历史弹幕](https://matsuri.icu/channel/401315430)
 - [DD记录](https://ddstats.ericlamm.xyz/user/401315430)
 
