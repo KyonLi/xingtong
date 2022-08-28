@@ -41,7 +41,7 @@ title: 导航
 
 ## 数据
 - [星瞳@VTBs](https://vtbs.moe/detail/401315430)
-- [~~VupLiveChatRecorder~~](https://vup.darkflame.ga/online)
+- [VupLiveChatRecorder](https://vup.darkflame.ga/online)
 - [同接营收](http://www.vtbs.fun/liveRecord)
 - [历史弹幕](https://matsuri.icu/channel/401315430)
 - [DD记录](https://ddstats.ericlamm.xyz/user/401315430)
