@@ -8,7 +8,7 @@ title: 导航
 
 ## 官方
 - [星瞳@bilibili](https://space.bilibili.com/401315430) [星瞳工具人@bilibili](https://space.bilibili.com/2122506217/dynamic)
-- B站话题 [#星瞳#](https://t.bilibili.com/topic/1388902/) [#小星星理发店#](https://t.bilibili.com/topic/26688490/) [‍#大作星象馆#](https://t.bilibili.com/topic/26691728/) [‍#2568诗社#](https://t.bilibili.com/topic/26691727/)
+- B站话题 [小星星的家](https://www.bilibili.com/v/topic/detail?topic_id=66066) [#星瞳#](https://t.bilibili.com/topic/1388902/) [#小星星理发店#](https://t.bilibili.com/topic/26688490/) [‍#大作星象馆#](https://t.bilibili.com/topic/26691728/) [‍#2568诗社#](https://t.bilibili.com/topic/26691727/)
 - [星瞳@bilibili直播间](https://live.bilibili.com/22886883)
 - [星瞳@抖音](https://www.douyin.com/user/MS4wLjABAAAAO_DN5Y6m73tFp_miILgfl-g1Fq2m0AWpYfsiuZ1lH5ZRSI_hhgFC3Ote647wWn-7)
 - [星瞳@微博](https://weibo.com/u/7318115383)
